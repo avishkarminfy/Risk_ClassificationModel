@@ -31,11 +31,11 @@ An interactive Streamlit dashboard that allows you to upload a `.csv` file and g
 ## Features
 
 - Upload customer CSV files directly from the UI
-- ![image](https://github.com/user-attachments/assets/7711f066-7859-4710-a97c-6401cad7f809)
+  ![image](https://github.com/user-attachments/assets/7711f066-7859-4710-a97c-6401cad7f809)
 - Displays full customer data + prediction result
 - Uses pre-trained model + preprocessing
 - Fast, simple, and user-friendly layout
-- ![image](https://github.com/user-attachments/assets/148097d4-da6d-479f-b407-ad4c6cc6d780)
+  ![image](https://github.com/user-attachments/assets/148097d4-da6d-479f-b407-ad4c6cc6d780)
 
 ---
 
