@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Results</title>
+    <style>
+        body { font-family: Arial; padding: 40px; background: #f0f0f0; }
+        h2 { text-align: center; color: #333; }
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            width: 95%;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: center;
+            font-size: 14px;
+        }
+        th {
+            background: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        .defaulter {
+            color: red;
+            font-weight: bold;
+        }
+        .non-defaulter {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Loan Prediction Results</h2>
+    <table>
+        <tr>
+            {% for col in column_names %}
+                <th>{{ col }}</th>
+            {% endfor %}
+        </tr>
+        {% for row in table_data %}
+        <tr>
+            {% for i in range(row|length) %}
+                {% if column_names[i] == 'Loan Status' %}
+                    <td class="{{ 'defaulter' if row[i] == 'Defaulter' else 'non-defaulter' }}">{{ row[i] }}</td>
+                {% else %}
+                    <td>{{ row[i] }}</td>
+                {% endif %}
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
